@@ -103,7 +103,7 @@ def predict():
 	else:
 		stroke_diagnosis='You aren\'t healthy, please go to nearest doctor'
 
-	return render_template("index.html", stroke_diagnosis=stroke_diagnosis)
+	return render_template("result.html", stroke_diagnosis=stroke_diagnosis)
 
 
 
