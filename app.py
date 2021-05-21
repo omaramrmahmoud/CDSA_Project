@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request
 import joblib
+import numpy as np
 
 # __name__ is equal to app.py
 app = Flask(__name__)
@@ -20,7 +21,7 @@ def home():
 def predict():
 
 	age =  request.form['Age']
-	hypertension = request.form['Hyptertension']
+	hypertension = request.form['Hypertension']
 	heart_disease = request.form['Heart Disease']
 	avg_glucose_level = request.form['Average Glucose Level']
 	bmi = request.form['BMI']
