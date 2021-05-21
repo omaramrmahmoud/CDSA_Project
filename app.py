@@ -24,7 +24,7 @@ def predict():
 	heart_disease = request.form['Heart Disease']
 	avg_glucose_level = request.form['Average Glucose Level']
 	bmi = request.form['BMI']
-	gender request.form['Gender']
+	gender= request.form['Gender']
 	ever_married = request.form['Ever Married']
 	work_type = request.form['Work Type']
 	residence_type = request.form['Residence Type']
