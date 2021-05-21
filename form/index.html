@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <title>Stroke Prediction</title>
+    <style>
+        .container {
+            width: 70%;
+            margin: auto;
+            text-align: center;
+        }
+        .main {
+            text-align: center;
+            margin: auto;
+        }
+        .form-check-label {
+            margin: 0 10px 0 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Stroke Prediction</h1>
+    </div>
+
+    <div class="main">
+        <form action="/predict" method="POST">
+            <div class="form-check">
+                What is your gender? <br>
+                <input type="radio" id="male" name="Gender" value="male" required>
+                <label class="form-check-label" for="male">Male</label>
+                <input type="radio" id="female" name="Gender" value="female" required>
+                <label class="form-check-label" for="female">Female</label><br><br>
+              </div>
+            
+              <div class="form-check">
+                Do you have hypertension? <br>
+                <input type="radio" name="Hyptertension" value="1" required>
+                <label class="form-check-label" for="True">Yes</label>
+                <input type="radio" name="gender" value="0" required>
+                <label class="form-check-label" for="False">No</label><br><br>
+              </div>
+            
+              <div class="form-check">
+                Do you have any heart diseases? <br>
+                <input type="radio" name="Heart Disease" value="1" required>
+                <label class="form-check-label" for="True">Yes</label>
+                <input type="radio" name="Heart Disease" value="0" required>
+                <label class="form-check-label" for="False">No</label><br><br>
+              </div>
+              
+              <div class="form-check">
+                Have you ever married? <br>
+                <input type="radio" name="Ever Married" value="yes" required>
+                <label class="form-check-label" for="True">Yes</label>
+                <input type="radio" name="Ever Married" value="no" required>
+                <label class="form-check-label" for="False">No</label><br><br>
+              </div>
+        
+              <div class="form-check">
+                Where do you live currently? <br>
+                <input type="radio" value="urban" required>
+                <label class="form-check-label" for="True">In an urban area.</label>
+                <input type="radio" value="rural" required>
+                <label class="form-check-label" for="False">In a rural area.</label><br><br>
+              </div>
+        
+              <div class="form-check">
+                How often do you smoke? <br>
+                <input type="radio" value="smokes" required>
+                <label class="form-check-label" for="True">I usually smoke.</label>
+                <input type="radio" value="never_smoked" required>
+                <label class="form-check-label" for="False">I have never smoked.</label>
+                <input type="radio" value="formely_smoked" required>
+                <label class="form-check-label" for="False">I used to smoke but I don't now.</label><br><br>
+              </div>
+        
+              <div class="form-check">
+                How old are you? <br>
+                <input type="number" name="Age" required><br><br>
+              </div>
+        
+              <div class="form-check">
+                What is your average glucose level? <br>
+                <input type="number" name="Average Glucose Level" required><br><br>
+              </div>
+        
+              <div class="form-check">
+                What is your BMI? <br>
+                <input type="number" name="BMI" required><br><br>
+              </div>
+        
+              <div class="form-check">
+                Have you ever worked before? If yes then what is your area of expertise?<br>
+                <select name="Work Type" id="workType">
+                  <option value="never_worked">No.</option>
+                  <option value="private">Yes, Private.</option>
+                  <option value="self_employed">Yes, I am self empolyed.</option>
+                  <option value="children">Yes, my work envolved children.</option>
+                </select><br><br>
+
+                <input type="submit" value="View Result">
+              </div>
+        </form>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+</body>
+</html>
